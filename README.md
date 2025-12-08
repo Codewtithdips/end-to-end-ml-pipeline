@@ -19,6 +19,7 @@
 7. Update the pipeline 
 8. Update the main.py
 
- Entire Workflow executed in  : main.py
- 
+```sh
+Entire Workflow executed in  : main.py
+```
 
