@@ -19,7 +19,148 @@
 7. Update the pipeline 
 8. Update the main.py
 
+Entire Workflow executed through
 ```sh
-Entire Workflow executed in  : main.py
+main.py
 ```
+
+Project Structure 
+```sh
+.
+├── app.py
+├── main.py
+├── config/
+│   ├── config.yaml
+│   ├── params.yaml
+│   └── schema.yaml
+├── artifacts/
+│   ├── data_ingestion/
+│   ├── data_validation/
+│   ├── data_transformation/
+│   ├── model_trainer/
+│   └── model_evaluation/
+├── src/
+│   └── datascience/
+│       ├── components/
+│       ├── config/
+│       ├── constants/
+│       ├── entity/
+│       ├── pipeline/
+│       └── utils/
+├── templates/
+│   ├── index.html
+│   └── results.html
+└── requirements.txt
+```
+
+Architecture Diagram
+sh```
+        ┌────────────────────┐
+        │   Data Ingestion   │
+        └─────────┬──────────┘
+                  │
+        ┌─────────▼──────────┐
+        │   Data Validation   │
+        └─────────┬──────────┘
+                  │
+        ┌─────────▼──────────┐
+        │ Data Transformation │
+        └─────────┬──────────┘
+                  │
+        ┌─────────▼──────────┐
+        │   Model Training    │
+        └─────────┬──────────┘
+                  │
+        ┌─────────▼──────────┐
+        │  Model Evaluation   │
+        └─────────┬──────────┘
+                  │
+        ┌─────────▼──────────┐
+        │      Prediction     │
+        └─────────────────────┘
+
+```
+
+sh```
+main.py  
+│
+├── Data Ingestion Pipeline
+├── Data Validation Pipeline
+├── Data Transformation Pipeline
+├── Model Trainer Pipeline
+└── Model Evaluation Pipeline
+```
+
+Install Requirements 
+```sh
+main.py  
+│
+├── Data Ingestion Pipeline
+├── Data Validation Pipeline
+├── Data Transformation Pipeline
+├── Model Trainer Pipeline
+└── Model Evaluation Pipeline
+```
+
+Run Full ML Pipeline
+```sh 
+python main.py
+```
+
+Run Flask Web App
+```sh
+python app.py
+```
+
+This App Runs At 
+sh```
+http://localhost:8080
+```
+
+Pipeline Stages Explained
+sh```
+Data Ingestion
+
+Data Stored in ----- artifacts/data_ingestion/
+
+Data Validation 
+
+Checks if CSV columns match expected schema 
+Writes results too : artifacts/data_validation/status.txt
+
+
+Data Transformation
+
+Performs train test split Saves :
+Train.csv 
+Test.csv
+
+Model trainer
+Saved Trained Model at : artifacts/model_trainer/model.joblib
+
+Model Evaluation
+SAVES JSON FILE AT ---- artifacts/model_evaluation/metrics.json
+
+```
+
+Flask Web Application:
+
+sh```
+/train --- Run the entire ML pipeline
+
+/predict --- Takes user input ----> return predicted win quality
+
+Templates located 
+
+/templates/index.html
+/templates/results.html
+
+```
+
+
+
+
+
+
+
 
