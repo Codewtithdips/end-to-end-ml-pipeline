@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/end%20to%20end/end-to-end-ml-pipeline/mlruns/0/e11bacb7698842f29b3300ca90a20ffb/artifacts
+end_time: 1765213597026
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e11bacb7698842f29b3300ca90a20ffb
+run_name: unruly-rat-505
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765213596943
+status: 3
+tags: []
+user_id: DIPANKAR DEBNATH
