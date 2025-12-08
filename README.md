@@ -22,10 +22,10 @@
 Entire Workflow executed through
 ```sh
 main.py
-```
+
 
 Project Structure 
-```sh
+
 .
 ├── app.py
 ├── main.py
@@ -51,10 +51,9 @@ Project Structure
 │   ├── index.html
 │   └── results.html
 └── requirements.txt
-```
 
 Architecture Diagram
-sh```
+
         ┌────────────────────┐
         │   Data Ingestion   │
         └─────────┬──────────┘
@@ -79,9 +78,6 @@ sh```
         │      Prediction     │
         └─────────────────────┘
 
-```
-
-sh```
 main.py  
 │
 ├── Data Ingestion Pipeline
@@ -89,10 +85,10 @@ main.py
 ├── Data Transformation Pipeline
 ├── Model Trainer Pipeline
 └── Model Evaluation Pipeline
-```
+
 
 Install Requirements 
-```sh
+
 main.py  
 │
 ├── Data Ingestion Pipeline
@@ -100,25 +96,25 @@ main.py
 ├── Data Transformation Pipeline
 ├── Model Trainer Pipeline
 └── Model Evaluation Pipeline
-```
+
+
 
 Run Full ML Pipeline
-```sh 
+
 python main.py
-```
+
 
 Run Flask Web App
-```sh
+
 python app.py
-```
+
 
 This App Runs At 
-sh```
+
 http://localhost:8080
-```
 
 Pipeline Stages Explained
-sh```
+
 Data Ingestion
 
 Data Stored in ----- artifacts/data_ingestion/
@@ -141,11 +137,10 @@ Saved Trained Model at : artifacts/model_trainer/model.joblib
 Model Evaluation
 SAVES JSON FILE AT ---- artifacts/model_evaluation/metrics.json
 
-```
 
 Flask Web Application:
 
-sh```
+
 /train --- Run the entire ML pipeline
 
 /predict --- Takes user input ----> return predicted win quality
